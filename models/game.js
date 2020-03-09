@@ -19,7 +19,7 @@ class gameReview {
             return error;
         }
     }
-    static async getgameIdgame() {
+    static async getgameId() {
         try {
             const response = await db.any(`SELECT * FROM games WHERE id = 1;`);
             return response

@@ -33,6 +33,6 @@ app.set('view engine', 'html');
 
 app.use('/', indexRouter);
 app.use('/', usersRouter);
-
+app.use('/', gameRouter);
 
 module.exports = app;

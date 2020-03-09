@@ -8,7 +8,7 @@ router.get('/game', async (req, res, next) => {
   
   res.render('template', {
     locals: {
-      title: gameData('name'),
+      title: 'Pokemon',
       gameData: gameData,
       is_logged_in: req.session.is_logged_in
     },
