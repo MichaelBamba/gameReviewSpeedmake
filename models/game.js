@@ -28,14 +28,7 @@ class gameReview {
             return error 
         }
     }
-    static async getgameIdSaga() {
-        try{
-            const response = await db.any(`SELECT * FROM gameS WHERE ID = 2;`);
-        } catch(error) {
-            console.error('ERROR', error);
-            return error
-        }
-    }
+    
 
 };
 

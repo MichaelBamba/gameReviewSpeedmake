@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const gameModel = require('../models/gameModel');
+const gameModel = require('../models/game');
 
 
 router.get('/', async function (req, res, next) {
