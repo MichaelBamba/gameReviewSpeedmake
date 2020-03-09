@@ -1,0 +1,10 @@
+<p>
+    ${gameData.map (entry => {
+    return `<ul>${entry.name}<br>
+        ${entry.publisher} <br>
+        ${entry.genre} <br>
+        ${entry.year_published} <br>
+        ${entry.rating}</ul>`
+    }
+    ).join('')}
+</p>

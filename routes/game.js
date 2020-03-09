@@ -1,27 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const gameModel = require('../models/game')
 
 
-const gameModel = require('../models/gameModel');
-
-
-router.get('/', async function (req, res, next) {
-  const gameData = await gameModel.getgame();
+router.get('/game', async (req, res, next) => {
+  const gameData = await gameModel.getgameId();
   
   res.render('template', {
     locals: {
-      title: 'Welcome',
+      title: gameData('name'),
       gameData: gameData,
       is_logged_in: req.session.is_logged_in
     },
     partials: {
-      partial: 'partial-index'
+      partial: 'partial-game'
     }
   });
 });
-
-
-
-
 
 module.exports = router;

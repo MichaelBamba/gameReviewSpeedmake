@@ -7,8 +7,8 @@ const pgp = require('pg-promise')({
     }
 });
 const option  = {
-    host:process.env('DB_HOST'),
-    database:process.env('DB_name')
+    host: 'localhost',
+    database: 'game_reviews'
 };
 
 const db=pgp(option);

@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const es6Renderer = require('express-es6-template-engine');
 
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+
 
 
 const app = express();
@@ -28,6 +31,8 @@ app.engine('html', es6Renderer);
 app.set('views', './views');
 app.set('view engine', 'html');
 
+app.use('/', indexRouter);
+app.use('/', usersRouter);
 
 
 module.exports = app;
